@@ -1,0 +1,21 @@
+.main-container {
+    float: left;
+    position: relative;
+    left: 50%;
+  }
+  .fixer-container {
+    float: left;
+    position: relative;
+    left: -50%;
+  }
+
+
+    
+  .ezfishnCenter {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    // background-color: #f1f1f1;
+    padding: 10px;
+    float: center;
+  }

@@ -1,0 +1,21 @@
+<mat-drawer-content>
+ 
+    <ng-container [ngSwitch]="path">
+      <ng-container *ngSwitchCase="'/main/stepper'">
+        <app-ice-stepper></app-ice-stepper>
+      </ng-container>
+      <ng-container *ngSwitchCase="'/main/alarm'">
+        <app-ice-alarm></app-ice-alarm>
+      </ng-container>
+      <ng-container *ngSwitchCase="'/main/port'">
+        <app-ice-port></app-ice-port>
+      </ng-container>
+      <ng-container *ngSwitchCase="'/main/ezf'">
+        <app-main></app-main>
+      </ng-container>
+      <ng-container *ngSwitchCase="'/main/home'">
+        <app-main></app-main>
+      </ng-container>
+    </ng-container>
+
+  </mat-drawer-content>

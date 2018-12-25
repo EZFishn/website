@@ -1,0 +1,24 @@
+
+    <!-- main menu -->
+    <app-toolbar></app-toolbar>
+
+    <!-- side nav -->
+    <div fxLayout="row">
+      <mat-drawer-container>
+        <mat-drawer #snav [mode]="'side'" opened="{{sidenavState | async }}">
+          <mat-nav-list>
+            <a mat-list-item routerLink="/main/home" routerLinkActive="active">Home</a>
+            <a mat-list-item routerLink="/main/stepper" routerLinkActive="active">Ice Stepper</a>
+            <a mat-list-item routerLink="/main/alarm" routerLinkActive="active">Ice Alarm</a>
+            <a mat-list-item routerLink="/main/port" routerLinkActive="active">Ice Port</a>
+          </mat-nav-list>
+        </mat-drawer>
+    
+        <!-- content -->
+        <app-content></app-content>
+
+      </mat-drawer-container>
+    </div>
+
+  
+  

@@ -1,0 +1,160 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html, body {
+  height: 100%;
+}
+
+.mat-nav-list a.active {
+  color: #3F51B5 !important;
+}
+
+.mat-drawer-container {
+  background-color: #fff !important;
+}
+.main-content {
+    flex: 1 1 auto;
+    overflow: auto;
+    min-width: height 100%;
+    height: 80%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+	.portrait {
+    height: 100px;
+    width: auto;
+	//background-color: #fff;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    overflow: auto;
+    min-width: height 100%;
+    height: 80%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.form-content {
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+  header {
+    //background-color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+
+  section {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+
+  nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+  }
+  
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+
+  article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    // background-color: #f1f1f1;
+    padding: 10px;
+  }
+
+  .ezfishnLeft {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    // background-color: #f1f1f1;
+    padding: 10px;
+    float: left;
+  }
+
+  
+  .ezfishnCenter {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    // background-color: #f1f1f1;
+    padding: 10px;
+    float: center;
+  }
+
+  .ezfishnRight {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    // background-color: #f1f1f1;
+    padding: 10px;
+    float: right;
+  }
+
+  footer {
+   // background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+
+  @media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+
+  #siteHeaderImage {
+    max-width: 100%;
+    max-height: 100%;
+	margin-left: 10px;
+}
+
+	#siteHeaderImageRight {
+        max-width: 100%;
+        max-height: 100%;
+        margin-right: 10px;
+}
+
+	.portrait {
+    height: 100px;
+    //height: auto;
+    width: auto;
+	// background-color: #fff;
+}

@@ -4,6 +4,7 @@ import { MainRoutingModule } from './main-routing.module';
 import { MaterialModule} from '../shared/material.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from "@angular/forms";
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { EzfComponent } from './ezf/ezf.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -21,7 +22,8 @@ import { MainComponent } from './main/main.component';
     MainRoutingModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
   ]
 })
 export class MainModule { }

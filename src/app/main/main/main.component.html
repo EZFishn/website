@@ -1,58 +1,65 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
+<div class="main-container">
+  <div class="fixer-container">
+    <article class="ezfishnCenter">
 
-<mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Ice Stepper</ng-template>
-      <article class="ezfishnLeft">
-        <div class="ezfishn">
-          <img id="siteHeaderImage" src="assets/img/IceStepperStep.PNG" style="float:left;" />
-        </div>
+      <div style="text-align:center">
+        <h1>
+          Welcome to {{ title }}!
+        </h1>
+      </div>
 
-        <div>
-          <button mat-raised-button matStepperNext color="primary">Next</button>
-        </div>
-      </article>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Ice Alarm</ng-template>
-      <div class="main-container">
-        <div class="fixer-container">
-          <article class="ezfishnCenter">
-            <div class="ezfishnCenter">
-              <img id="siteHeaderImage" src="assets/img/IceAlarmStep.PNG" style="float:center;" />
+      <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Ice Stepper</ng-template>
+            <article class="ezfishnLeft">
+              <div class="ezfishn">
+                <img id="siteHeaderImage" src="assets/img/IceStepperStep.PNG" style="float:left;" />
+              </div>
+
+              <div>
+                <button mat-raised-button matStepperNext color="primary">Next</button>
+              </div>
+            </article>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Ice Alarm</ng-template>
+            <div class="main-container">
+              <div class="fixer-container">
+                <article class="ezfishnCenter">
+                  <div class="ezfishnCenter">
+                    <img id="siteHeaderImage" src="assets/img/IceAlarmStep.PNG" style="float:center;" />
+                  </div>
+
+                  <div>
+                    <button mat-raised-button matStepperPrevious color="primary">Back</button>
+                    <button mat-raised-button matStepperNext color="primary">Next</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Ice Port</ng-template>
+          <article class="ezfishnRight">
+            <div class="ezfishn">
+              <img id="siteHeaderImage" src="assets/img/IcePortStep.PNG" />
             </div>
 
             <div>
               <button mat-raised-button matStepperPrevious color="primary">Back</button>
-              <button mat-raised-button matStepperNext color="primary">Next</button>
+              <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
             </div>
           </article>
-        </div>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Ice Port</ng-template>
-    <article class="ezfishnRight">
-      <div class="ezfishn">
-        <img id="siteHeaderImage" src="assets/img/IcePortStep.PNG" />
-      </div>
+        </mat-step>
+      </mat-horizontal-stepper>
 
-      <div>
-        <button mat-raised-button matStepperPrevious color="primary">Back</button>
-        <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
-      </div>
     </article>
-  </mat-step>
-</mat-horizontal-stepper>
-
+  </div>
+</div>
 <!-- <article>
   <div style="text-align:center">
     <h1>

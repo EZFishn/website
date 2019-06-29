@@ -10,7 +10,7 @@ export class MainComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  title = 'EZFishn Product Line';
+  title = 'EZFishn';
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {

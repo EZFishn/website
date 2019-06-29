@@ -414,13 +414,27 @@ THE SOFTWARE.
 
 @angular/material/sidenav
 
+@angular/material/tabs
+
+@angular/material/card
+
 @angular/material/stepper
 
-@angular/material/bottom-sheet
+@angular/material/form-field
 
 @angular/material/dialog
 
 @angular/material/datepicker
+
+@angular/material/radio
+
+@angular/material/select
+
+@angular/material/core
+
+@angular/material/slide-toggle
+
+@angular/material/bottom-sheet
 
 @angular/material/tooltip
 

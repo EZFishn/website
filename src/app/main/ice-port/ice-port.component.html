@@ -1,9 +1,119 @@
-<div class="main-container">
-  <div class="fixer-container">
-    <article class="ezfishnCenter">
-      <div class="ezfishnCenter">
-        <img id="siteHeaderImage" src="assets/img/IcePort.PNG" style="float:center;" />
-      </div>
-    </article>
-  </div>
-</div>
+<!-- Main Toolbar of an App -->  
+<mat-toolbar color="accent">  
+    <span class="demo-toolbar"></span>  
+    <button mat-button href="asp-dotnet-mvc-tutorials.blogspot.in">Go To Our Facebook Page</button>  
+  
+</mat-toolbar>  
+  
+<!-- Card container that binds all togather -->  
+<mat-card>  
+    <!-- Title of an Card -->  
+    <mat-card-title>  
+        EZFishn Contact Request Form  
+    </mat-card-title>  
+  
+    <!-- Actual content starts from here -->  
+    <mat-card-content>  
+        <form [formGroup]="regiForm" (ngSubmit)="onFormSubmit(regiForm.value)">  
+            <table>  
+                <tr>  
+                    <td>  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="FirstName" matInput placeholder="First Name">  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!regiForm.get('FirstName').valid && regiForm.get('FirstName').touched">Please enter First Name !!!</span>  
+                        </mat-error>  
+                    </td>  
+                    <td>  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="LastName" matInput placeholder="Last Name">  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!regiForm.get('LastName').valid && regiForm.get('LastName').touched">Please enter Last Name !!!</span>  
+                        </mat-error>  
+                    </td>  
+                </tr>  
+                <tr>  
+                    <td colspan="2">  
+                        <mat-form-field class="demo-full-width">  
+                            <textarea formControlName="Address" matInput placeholder="Address" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!regiForm.get('Address').valid && regiForm.get('Address').touched">Please enter proper address !!!</span>  
+                        </mat-error>  
+                    </td>  
+                </tr>  
+                <tr>  
+                    <td colspan="2">  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="DOB" matInput [matDatepicker]="picker" placeholder="Contact Date">  
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>  
+                            <mat-datepicker touchUi="true" #picker></mat-datepicker>  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!regiForm.get('DOB').valid && regiForm.get('DOB').touched">Please select any Date !!!</span>  
+                        </mat-error>  
+                    </td>  
+                </tr>  
+                <tr>  
+                    <td>  
+                        <span>Contact</span><br><br>  
+                        <mat-radio-group formControlName="Contact">  
+                            <mat-radio-button value="Phone">Phone</mat-radio-button>  
+                            <mat-radio-button value="Email">Email</mat-radio-button>  
+                        </mat-radio-group>  
+                        <mat-error>  
+                            <span *ngIf="!regiForm.get('Contact').valid && regiForm.get('Contact').touched">Please select any contact !!!</span>  
+                        </mat-error>  
+                    </td>  
+                    <td><br>  
+                        <mat-form-field>  
+                            <mat-select formControlName="Product" placeholder="Select Product">  
+                                <mat-option>-- Select Any --</mat-option>  
+                                <mat-option value="IceStepper">Ice Stepper</mat-option>  
+                                <mat-option value="IceAlarm">Ice Alarm</mat-option>  
+                                <mat-option value="Both">Both</mat-option>  
+                            </mat-select>  
+                            <mat-error>  
+                                <span *ngIf="!regiForm.get('Product').valid && regiForm.get('Product').touched">Please select any item !!!</span>  
+                            </mat-error>  
+                        </mat-form-field>  
+                    </td>  
+                </tr> 
+                <tr>  
+                    <td colspan="2">  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="Phone" matInput placeholder="Phone">  
+                            <mat-hint>(###) ###-####</mat-hint>    
+                        </mat-form-field>  
+                    </td>  
+                </tr>  
+                <tr>  
+                    <td colspan="2">  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="Email" matInput placeholder="Email">  
+                            <mat-hint>use like : demo@demo.com</mat-hint>  
+                            <mat-error>  
+                                <span *ngIf="!regiForm.get('Email').valid && regiForm.get('Email').touched">Enter proper Email !!!</span>  
+                            </mat-error>  
+                        </mat-form-field>  
+                    </td>  
+                </tr>  
+                <tr>  
+                    <td colspan="2">  
+                        <mat-slide-toggle formControlName="IsAccepted" (change)="onChange($event)">Interested To Make Purchase.</mat-slide-toggle>  
+                    </td>  
+                </tr>  
+                <tr>  
+                    <td colspan="2" class="content-center">  
+                        <button mat-raised-button color="accent" [disabled]="!regiForm.valid">Submit</button>  
+                    </td>  
+                </tr>  
+                <tr>  
+                    <td></td>  
+                </tr>  
+            </table>  
+        </form>  
+    </mat-card-content>  
+</mat-card>

@@ -12,9 +12,11 @@ import {
   MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule,
   MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule,
   MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule,
-  MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule
+  MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, 
+  MatNativeDateModule, MatOptionModule ,ErrorStateMatcher,ShowOnDirtyErrorStateMatcher
 } from '@angular/material';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';  
 @NgModule({
   imports: [
     A11yModule,
@@ -57,6 +59,7 @@ import {
     MatTooltipModule,
     MatTreeModule,
     ScrollingModule,
+    MatNativeDateModule, MatOptionModule
   ],
   exports: [
     A11yModule,
@@ -99,6 +102,10 @@ import {
     MatTooltipModule,
     MatTreeModule,
     ScrollingModule,
-  ]
+    MatNativeDateModule, MatOptionModule
+  ],  
+  providers: [  
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}  
+  ],
 })
 export class MaterialModule { }

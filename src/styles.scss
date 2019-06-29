@@ -34,6 +34,7 @@ $accent:  mat-palette($mat-amber, A200, A100, A400);
   flex: 3;
   padding: 10px;
   float: center;
+  max-width: 800px;
 }
 
 .ezfishnRight {
@@ -42,6 +43,7 @@ $accent:  mat-palette($mat-amber, A200, A100, A400);
   flex: 3;
   padding: 10px;
   float: right;
+  max-width: 800px;
 }
 
 #siteHeaderImage {

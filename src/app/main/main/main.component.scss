@@ -1,3 +1,19 @@
+.example-card {
+    max-width: 800px;
+  }
+  
+  .example-header-image {
+    background-image: url('/assets/img/CompleteProductTranslucentRender.JPG');
+    background-size: cover;
+  }
+
+  .main-div{
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 // .main-container {
 //     float: left;
 //     position: relative;

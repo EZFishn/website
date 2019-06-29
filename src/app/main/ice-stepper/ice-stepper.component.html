@@ -1,5 +1,5 @@
 
-  <div class="main-container">
+  <!-- <div class="main-container">
     <div class="fixer-container">
       <article class="ezfishnCenter">
         <div class="ezfishnCenter">
@@ -7,4 +7,115 @@
         </div>
       </article>
     </div>
-  </div>
+  </div> -->
+
+
+
+  <mat-tab-group>
+    <mat-tab label="About">
+      <div class="main-container">
+        <div class="fixer-container">
+            <div style="text-align:center">
+                <h1>
+                  Welcome to {{ title }}!
+                </h1>
+              </div>
+              <div class="main-div">
+                <mat-card class="example-card">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>EZFishn</mat-card-title>
+                    <mat-card-subtitle>Ice Stepper</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="assets/img/IceStepperFrontRender.JPG" alt="Product">
+                  <mat-card-content>
+                    <p>
+                      The Ice Stepper is a portable Jigging Device that easily mounts to the bottom of a 5 gallon pail.  
+                      The Ice Stepper runs off a 12 Volt battery, which is not included.
+                    </p> 
+                    <p>
+                      The Jigging Motion is created from a stepper motor and drive belt.
+                    </p>                       
+                    <p>
+                      Simply, place your fishing line on the line holder and press the start switch and you will be jigging.
+                    </p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                  </mat-card-actions>
+                </mat-card>
+              </div>
+        </div>
+      </div>
+    </mat-tab>
+  
+    <mat-tab label="How it Works">
+  
+      <div class="ezfishnCenter">
+        <div class="portrait">
+          <img id="siteHeaderImage" src="assets/img/ICEStepperLogo.jpeg" />
+        </div>
+      </div>
+  
+      <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Ice Stepper</ng-template>
+            <div class="main-container">
+              <div class="fixer-container">
+                <article class="ezfishnCenter">
+                  <div class="ezfishnCenter">
+                    <img id="siteHeaderImage" src="assets/img/IceStepperFrontRender.JPG" style="float:center;" />
+                  </div>
+  
+                  <div>
+                    <button mat-raised-button matStepperNext color="primary">Next</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Atttach To Bucket</ng-template>
+            <div class="main-container">
+              <div class="fixer-container">
+                <article class="ezfishnCenter">
+                  <div class="ezfishnCenter">
+                    <img id="siteHeaderImage" src="assets/img/IceStepperWithBucketRender.JPG" style="float:center;" />
+                  </div>
+  
+                  <div>
+                    <button mat-raised-button matStepperPrevious color="primary">Back</button>
+                    <button mat-raised-button matStepperNext color="primary">Next</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Set Up Pole</ng-template>
+          <div class="main-container">
+            <div class="fixer-container">
+              <article class="ezfishnCenter">
+                <div class="ezfishnCenter">
+                  <img id="siteHeaderImage" src="assets/img/CompleteProductRender.JPG" style="float:center;" />
+                </div>
+  
+                <div>
+                  <button mat-raised-button matStepperPrevious color="primary">Back</button>
+                  <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+  
+  
+  
+    </mat-tab>
+  </mat-tab-group>

@@ -15,10 +15,10 @@
 
     <div fxShow="true" fxHide.lt-md="true">
       <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-      <a routerLink="/main/home"  routerLinkActive="active" mat-button>Home</a>
+      <a routerLink="/main/home"  routerLinkActive="active" mat-button>About</a>
       <a routerLink="/main/stepper"  routerLinkActive="active" mat-button>Ice Stepper</a>
       <a routerLink="/main/alarm"  routerLinkActive="active" mat-button>Ice Alarm</a>
-      <a routerLink="/main/port"  routerLinkActive="active" mat-button>Ice Port</a>
+      <a routerLink="/main/port"  routerLinkActive="active" mat-button>Order</a>
 
     </div>
 
@@ -34,10 +34,10 @@
 
       <div fxLayout="column">
           <a (click)="sidenav.toggle()" mat-button>Close</a>
-        <a routerLink="/main/home"  routerLinkActive="active" (click)="sidenav.toggle()" mat-button>Home</a>
+        <a routerLink="/main/home"  routerLinkActive="active" (click)="sidenav.toggle()" mat-button>About</a>
         <a routerLink="/main/stepper"  routerLinkActive="active" (click)="sidenav.toggle()" mat-button>Ice Stepper</a>
         <a routerLink="/main/alarm"  routerLinkActive="active" (click)="sidenav.toggle()" mat-button>Ice Alarm</a>
-        <a routerLink="/main/port"  routerLinkActive="active" (click)="sidenav.toggle()" mat-button>Ice Port</a>
+        <a routerLink="/main/port"  routerLinkActive="active" (click)="sidenav.toggle()" mat-button>Order</a>
       </div>
 
     </mat-sidenav>

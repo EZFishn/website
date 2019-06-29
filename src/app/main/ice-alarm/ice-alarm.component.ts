@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-ice-alarm',
@@ -7,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ice-alarm.component.scss']
 })
 export class IceAlarmComponent implements OnInit {
-
   title = 'Ice Alarm';
+  isLinear = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
 
-  constructor() { }
+ constructor(private _formBuilder: FormBuilder) { }
 
-  ngOnInit() {
 
-  }
+ ngOnInit() {
+  this.firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required]
+  });
+  this.secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required]
+  });
+}
 
 }

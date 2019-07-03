@@ -11,6 +11,7 @@ export class IceStepperComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   title = 'Ice Stepper';
+  
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {

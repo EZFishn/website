@@ -1,7 +1,7 @@
 <!-- Main Toolbar of an App -->  
 <mat-toolbar color="accent">  
     <span class="demo-toolbar"></span>  
-    <button mat-button href="asp-dotnet-mvc-tutorials.blogspot.in">Go To Our Facebook Page</button>  
+    <button mat-button href="mailto:Sales@Ezfishn.com">Sales@Ezfishn.com</button>  
   
 </mat-toolbar>  
   
@@ -14,7 +14,7 @@
   
     <!-- Actual content starts from here -->  
     <mat-card-content>  
-        <form [formGroup]="regiForm" (ngSubmit)="onFormSubmit(regiForm.value)">  
+        <form [formGroup]="regiForm" #formDirective="ngForm" (ngSubmit)="onFormSubmit(regiForm.value, formDirective)">
             <table>  
                 <tr>  
                     <td>  
@@ -117,3 +117,6 @@
         </form>  
     </mat-card-content>  
 </mat-card>
+
+
+

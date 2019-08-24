@@ -22,4 +22,8 @@ export class MainComponent implements OnInit {
     });
   }
 
+  goToLink(){
+    window.open("https://youtu.be/izlv7E6V_rs" , "_blank");
+}
+
 }

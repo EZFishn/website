@@ -19,6 +19,33 @@
     display: block;
 }
 
+a {
+  text-decoration: underline;
+  color: blue;
+}
+a:link {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* visited link */
+a:visited {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+  text-decoration: underline;
+}
 // .main-container {
 //     float: left;
 //     position: relative;

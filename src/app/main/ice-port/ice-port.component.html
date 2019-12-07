@@ -9,7 +9,7 @@
 <mat-card>  
     <!-- Title of an Card -->  
     <mat-card-title>  
-        EZFishn Information and Pre-Order Request Form  
+        EZFishn Request Information
     </mat-card-title>  
   
     <!-- Actual content starts from here -->  
@@ -29,9 +29,9 @@
                         <mat-form-field class="demo-full-width">  
                             <input formControlName="LastName" matInput placeholder="Last Name">  
                         </mat-form-field>  
-                        <mat-error>  
+                        <!-- <mat-error>  
                             <span *ngIf="!regiForm.get('LastName').valid && regiForm.get('LastName').touched">Please enter Last Name !!!</span>  
-                        </mat-error>  
+                        </mat-error>   -->
                     </td>  
                 </tr>  
                 <tr>  
@@ -39,9 +39,9 @@
                         <mat-form-field class="demo-full-width">  
                             <textarea formControlName="Address" matInput placeholder="Address" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5"></textarea>  
                         </mat-form-field>  
-                        <mat-error>  
+                        <!-- <mat-error>  
                             <span *ngIf="!regiForm.get('Address').valid && regiForm.get('Address').touched">Please enter proper address !!!</span>  
-                        </mat-error>  
+                        </mat-error>   -->
                     </td>  
                 </tr>  
                 <tr>  
@@ -51,9 +51,9 @@
                             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>  
                             <mat-datepicker touchUi="true" #picker></mat-datepicker>  
                         </mat-form-field>  
-                        <mat-error>  
+                        <!-- <mat-error>  
                             <span *ngIf="!regiForm.get('DOB').valid && regiForm.get('DOB').touched">Please select any Date !!!</span>  
-                        </mat-error>  
+                        </mat-error>   -->
                     </td>  
                 </tr>  
                 <tr>  
@@ -63,9 +63,9 @@
                             <mat-radio-button value="Phone">Phone</mat-radio-button>  
                             <mat-radio-button value="Email">Email</mat-radio-button>  
                         </mat-radio-group>  
-                        <mat-error>  
+                        <!-- <mat-error>  
                             <span *ngIf="!regiForm.get('Contact').valid && regiForm.get('Contact').touched">Please select any contact !!!</span>  
-                        </mat-error>  
+                        </mat-error>   -->
                     </td>  
                     <td><br>  
                         <mat-form-field>  
@@ -75,9 +75,9 @@
                                 <mat-option value="IceAlarm">Ice Alarm</mat-option>  
                                 <mat-option value="Both">Both</mat-option>  
                             </mat-select>  
-                            <mat-error>  
+                            <!-- <mat-error>  
                                 <span *ngIf="!regiForm.get('Product').valid && regiForm.get('Product').touched">Please select any item !!!</span>  
-                            </mat-error>  
+                            </mat-error>   -->
                         </mat-form-field>  
                     </td>  
                 </tr> 

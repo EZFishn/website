@@ -1,45 +1,115 @@
-.mat-card {    
-    text-align: -webkit-center;    
-}    
-    
-.demo-toolbar {    
-    display: flex;    
-    align-items: center;    
-    width: 100%;    
-}    
-    
-.demo-form {    
-    min-width: 150px;    
-    max-width: 500px;    
-    width: 100%;    
-}    
-    
-.demo-full-width {    
-    width: 100%;    
-}    
-    
-body {    
-    margin: 0;    
-    font-family: Roboto, sans-serif;    
-}    
-    
-mat-card {    
-    max-width: 80%;    
-    margin: 2em auto;    
-    text-align: center;    
-}    
-    
-mat-toolbar-row {    
-    justify-content: space-between;    
-}    
-    
-.done {    
-    position: fixed;    
-    bottom: 20px;    
-    right: 20px;    
-    color: white;    
-}    
-    
 .content-center {    
     text-align: -webkit-center;    
+}
+
+.example-header-image {
+    background-image: url('/assets/img/KeyBoard.jpg');
+    background-size: cover;
+  }
+  
+  .full-height{
+    height: 100%;
+    //overflow: hidden;
+  }
+
+  .main-div{
+    height: 100vh;;
+  }
+
+  .full-height.mat-card{
+    padding-left: 25% !important;
+    padding-right: 25% !important;
+   }
+
+  img {
+    max-height: 40%;
+  }
+
+  ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: Green; /*replace with your color*/
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: skyblue;  /*replace with your color*/
+}
+
+
+
+  .bg {
+    /* The image used */
+    background-image: url('/assets/img/KeyBoard.jpg');
+  
+    /* Full height */
+    //height: 100%;
+    height: 100vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  // table {
+  //     width: 100%;
+  //     border: 1px solid black;
+  //     border-collapse: collapse;
+  //     margin:10px;
+  //     padding: 20px;
+  // }
+
+  // table tbody {
+  //   border-top: 15px solid white;
+  //   margin-left:10px;
+  //   padding: 20px;
+  //   padding-left: 50px;
+  // }
+
+  // form{
+  //   margin:10px;
+  //   padding: 20px;
+  // }
+
+
+
+// .mat-radio-button {
+//   width: 100%;
+//   height: 48px;
+  
+//   display: flex;
+//   align-items: center;
+// }
+
+.contact-background {
+  //background-image: url('/assets/img/KeyBoard.jpg');
+  background-color: #424242;
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  height: 100%;
+}
+
+.card.mat-card{
+  padding-left: 25% !important;
+  padding-right: 25% !important;
+ }
+
+ .example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none !important;
 }

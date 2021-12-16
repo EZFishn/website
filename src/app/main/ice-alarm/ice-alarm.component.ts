@@ -7,7 +7,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./ice-alarm.component.scss']
 })
 export class IceAlarmComponent implements OnInit {
-  title = 'Ice Alarm';
+  title = 'Producer';
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
@@ -15,13 +15,9 @@ export class IceAlarmComponent implements OnInit {
  constructor(private _formBuilder: FormBuilder) { }
 
 
- ngOnInit() {
-  this.firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required]
-  });
-  this.secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required]
-  });
-}
+  
+ links : Array<string>;
+
+ ngOnInit(){}
 
 }

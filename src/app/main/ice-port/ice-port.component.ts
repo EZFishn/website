@@ -13,8 +13,6 @@ export class IcePortComponent implements OnInit {
   regiForm: FormGroup;  
   FirstName:string='';  
   LastName:string='';  
-  Address:string='';  
-  DOB:Date=null;  
   Contact:string='';  
   Product:string='';  
   Email:string='';  
@@ -25,27 +23,12 @@ export class IcePortComponent implements OnInit {
 
     constructor(private fb: FormBuilder, private http: HttpClient, private _snackBar: MatSnackBar ) {   
 
-    // // To initialize FormGroup  
-    // this.regiForm = fb.group({  
-    //   'FirstName' : [null, Validators.required],  
-    //   'LastName' : [null, Validators.required],  
-    //   'Address' : [null],  
-    //   'DOB' : [null, Validators.required],  
-    //   'Contact':[null, Validators.required],  
-    //   'Product':[null, Validators.required],  
-    //   'Email':[null, Validators.compose([Validators.required,Validators.email])], 
-    //   'Phone': [null],
-    //   'IsAccepted':[null]  
-    // });  
-
     this.regiForm = fb.group({  
-      'FirstName' : [null],  
+      'FirstName' : [null, Validators.compose([Validators.required,Validators.required])],  
       'LastName' : [null],  
-      'Address' : [null],  
-      'DOB' : [null], 
       'Contact':[null],
       'Product':[null], 
-      'Email':[null, Validators.compose([Validators.required,Validators.email])], 
+      'Email':[null], 
       'Phone': [null],
       'IsAccepted':[null]  
     }); 
@@ -69,7 +52,7 @@ export class IcePortComponent implements OnInit {
 
   onFormSubmit(form: NgForm, formDirective: FormGroupDirective) {
     this.sendMail();
-    this.openSnackBar('Thanks from all of us at Ezfishn.com');
+    this.openSnackBar('Thanks from all of us at JayParkerProductions.com');
     formDirective.resetForm();
     this.reset();
   }  
@@ -77,8 +60,6 @@ export class IcePortComponent implements OnInit {
   public sendMail() {
     var firstNameValue = this.regiForm.value.FirstName;
     var lastNameValue = this.regiForm.value.LastName;
-    var addressValue = this.regiForm.value.Address;
-    var dOBValue = this.regiForm.value.DOB;
     var contactValue = this.regiForm.value.Contact;
     var productValue = this.regiForm.value.Product;
     var emailValue = this.regiForm.value.Email;
@@ -87,20 +68,18 @@ export class IcePortComponent implements OnInit {
     var isAcceptedValueText = null
 
     if (isAcceptedValue) {
-      isAcceptedValueText = 'Interested To Make Purchase!'
+      isAcceptedValueText = 'Interested To Hire!'
     }  else {
-      isAcceptedValueText = 'Not Interested To Make Purchase.'
+      isAcceptedValueText = 'Not Interested To Hire.'
     }
 
     var html = '<html><body>'
     html += '<h1> ' + 'Name: ' + ' </h1><p> ' + firstNameValue + ' ' + lastNameValue + ' </p>'
-    html += '<h1> ' + 'Address: ' + ' </h1><p> ' + addressValue + ' </p>'
-    html += '<h1> ' + 'Date: ' + ' </h1><p> ' + dOBValue + ' </p>'
     html += '<h1> ' + 'Product: ' + ' </h1><p> ' + productValue + ' </p>'
     html += '<h1> ' + 'Contact Via: ' + ' </h1><p> ' + contactValue + ' </p>'
     html += '<h1> ' + 'Phone: ' + ' </h1><p> ' + phoneValue + ' </p>'
     html += '<h1> ' + 'Email Address: ' + ' </h1><p> ' + emailValue + ' </p>'
-    html += '<h1> ' + 'Interested To Buy: ' + ' </h1><p> ' + isAcceptedValueText + ' </p>'
+    html += '<h1> ' + 'Interested To Hire: ' + ' </h1><p> ' + isAcceptedValueText + ' </p>'
     html += '</body></html>'
 
     let data = JSON.stringify({

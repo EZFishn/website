@@ -1,9 +1,9 @@
 .example-header-image {
-  background-image: url('/assets/img/BoomMic.jpg');
+  background-image: url("/assets/img/BoomMic.jpg");
   background-size: cover;
 }
 
-.full-height{
+.full-height {
   height: 100vh;
   //overflow: hidden;
 }
@@ -24,6 +24,6 @@ img {
   background-size: cover;
 }
 
-.mat-card:not([class*=mat-elevation-z]) {
+.mat-card:not([class*="mat-elevation-z"]) {
   box-shadow: none !important;
 }

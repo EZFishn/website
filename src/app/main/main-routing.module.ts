@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'alarm', component: EzfComponent },
   { path: 'port', component: EzfComponent },
   { path: 'home', component: EzfComponent },
+  { path: 'album', component: EzfComponent },
   { path: '**', redirectTo: 'ezf' }];
 
 @NgModule({

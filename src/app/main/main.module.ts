@@ -14,9 +14,10 @@ import { IceStepperComponent } from './ice-stepper/ice-stepper.component';
 import { IceAlarmComponent } from './ice-alarm/ice-alarm.component';
 import { IcePortComponent } from './ice-port/ice-port.component';
 import { MainComponent } from './main/main.component';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
-  declarations: [EzfComponent, ToolbarComponent, ContentComponent, SidenavComponent, IceStepperComponent, IceAlarmComponent, IcePortComponent, MainComponent],
+  declarations: [EzfComponent, ToolbarComponent, ContentComponent, SidenavComponent, IceStepperComponent, IceAlarmComponent, IcePortComponent, MainComponent, AlbumComponent],
   imports: [
     CommonModule,
     MainRoutingModule,

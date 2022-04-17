@@ -1,0 +1,29 @@
+.example-header-image {
+  background-image: url("/assets/img/ImpossibleCover.jpg");
+  background-size: cover;
+}
+
+.full-height {
+  height: 100vh;
+  //overflow: hidden;
+}
+
+img {
+  max-height: 40%;
+}
+
+.contact-background {
+  background-image: url("/assets/img/ImpossibleCover.jpg");
+  //background-color: #424242;
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: none !important;
+}

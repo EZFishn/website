@@ -4,7 +4,7 @@
 }
 
 .full-height {
-  height: 100vh;
+  height: 100%;
   //overflow: hidden;
 }
 
@@ -22,6 +22,10 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
 }
 
 .mat-card:not([class*="mat-elevation-z"]) {
